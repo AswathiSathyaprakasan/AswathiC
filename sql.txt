@@ -1,0 +1,63 @@
+CREATE DATABASE demo1;
+CREATE TABLE WORKER (WORKER_ID int,FIRST_NAME varchar(20),LAST_NAME varchar(20),SALARY int,JOINING_DATE date,DEPARTMENT varchar(20));
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (1,'Aswathi ','cp',300000,'2023-12-22','cse');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (2,'Kiran','v',300000,'2014-02-22','cse');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (3,'Namitha','k',200000,'2023-09-27','ece');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (4,'Athulya','k',320000,'2023-09-27','mech');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (5,'Rekha','k',280000,'2014-05-27','cse');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (6,'Shahma','k',100000,'2024-02-27','civil');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (7,'Satish','s',890000,'2023-08-27','admin');
+INSERT INTO `worker`(`WORKER_ID`, `FIRST_NAME`, `LAST_NAME`, `SALARY`, `JOINING_DATE`, `DEPARTMENT`) VALUES (8,'Vipul','c',550000,'2023-08-27','admin');
+
+1) SELECT FIRST_NAME AS WORKER_NAME FROM worker;
+
+2) SELECT upper(FIRST_NAME) FROM worker;
+
+3) SELECT DISTINCT DEPARTMENT FROM worker;
+
+4) SELECT LEFT(first_name, 3) AS first_three_characters FROM worker;
+
+5) SELECT RTRIM(first_name) AS first_name FROM worker;
+
+6) SELECT DISTINCT length(department) FROM worker;
+
+7) SELECT CONCAT(first_name, ' ', last_name) AS complete_name FROM worker;
+
+8) SELECT *FROM worker ORDER BY first_name ASC; 
+
+9) SELECT *FROM worker ORDER BY first_name ASC, department DESC;
+
+10) SELECT *FROM worker WHERE first_name IN ('Vipul', 'Satish');
+
+11) SELECT *FROM worker WHERE first_name NOT IN ('Vipul', 'Satish');
+
+12) SELECT *FROM worker WHERE first_name = 'Vipul' OR first_name = 'Satish';
+
+13) SELECT *FROM worker WHERE FIRST_NAME LIKE '%A%';
+
+14) SELECT *FROM worker WHERE FIRST_NAME LIKE '%A';
+
+15) SELECT *FROM worker WHERE FIRST_NAME LIKE '_____H'; -- Four underscores represent any four characters, followed by 'H'
+
+16) SELECT *FROM worker WHERE SALARY BETWEEN 100000 AND 500000;
+
+17) SELECT *FROM worker WHERE MONTH(JOINING_DATE) = 2 AND YEAR(JOINING_DATE) = 2014;
+
+18) SELECT COUNT(*) AS employee_count FROM worker WHERE DEPARTMENT = 'Admin';
+
+19) SELECT FIRST_NAME, LAST_NAME FROM worker WHERE SALARY >= 50000 AND SALARY <= 100000;
+
+20) SELECT DEPARTMENT, COUNT(*) AS worker_count FROM worker GROUP BY DEPARTMENT ORDER BY worker_count DESC;
+
+
+
+
+
+
+
+
+
+
+  
+
+
